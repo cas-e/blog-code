@@ -27,9 +27,8 @@ public class Tree {
 	private static String[] keywords  = {"true", "false", "&&", "||", "!", "(", ")"};
 	
 	private static boolean member(String s, String[] els) {
-		boolean found = false;
-		for (String e : els) { if (s.equals(e)) found = true; }
-		return found;
+		for (String e : els) { if (s.equals(e)) return true; }
+		return false;
 	}
 	private static String[] getVars(String[] tokens, String[] keywords) {
     	return Arrays.stream(tokens).distinct()
